@@ -1,0 +1,101 @@
+/* reset start */
+  *{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+  }
+/* reset end */
+
+/* tipography start */
+  html{
+    font-size: 62.5%;
+  }
+  body{
+    font-family: 'Jost', sans-serif;
+    font-size: 1.6rem;
+  }
+  h4{
+    color: #fff;
+  }
+/* typography end */
+
+/* header start */
+  .ms_top_bar{
+    width: calc(100% - 230px);
+    height: 70px;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-left: 230px;
+    float: right;
+    text-align: right;
+  }
+  .ms_button{
+    padding: 6px 30px;
+    color: #fff;
+    background-color: Transparent;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    margin: 18px 20px 0 0;
+    font-weight: 500;
+    font-family: 'Jost', sans-serif;
+  }
+/* header end */
+
+/* main start */
+  .ms_leftside_menu{
+    background-color: #000;
+    height: calc(100vh - 80px);
+    width: 230px;
+    position: fixed;
+    z-index: 1;
+  }
+  .ms_logo{
+    height: 40px;
+    margin: 15px 0 20px 20px;
+  }
+  .ms_menu li {
+    padding: 6px 20px;
+  }
+  .ms_menu li:hover{
+    border-left: 2px solid #adff2f;
+  }
+  .ms_menu li a:hover{
+    color: #fff;
+  }
+  .ms_menu li a{
+   text-decoration: none;
+   color: #6c6c6c;
+  }
+  .ms_icon{
+    height:20px;
+    vertical-align: text-top;
+    color: #d2d2d2;
+  }
+  .ms_leftside_menu h4{
+    padding: 5px 20px;
+    margin-top: 8px;
+  }
+  .ms_playlist_plus{
+    padding: 8px;
+    background-color: #b4b4b4;
+    color: #000;
+    margin-right: 12px;
+  }
+  .ms_main_content{
+    background-color: #141922;
+    height: calc(100vh - 80px);
+    width: calc(100% - 230px);
+    margin-left: 230px;
+  }
+/* main end */
+
+/* footer start */
+  .ms_player {
+    overflow: hidden;
+    background-color: #282828;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+  }
+/* footer end */
