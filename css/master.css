@@ -4,6 +4,7 @@
     margin:0;
     box-sizing: border-box;
   }
+
 /* reset end */
 
 /* tipography start */
@@ -12,21 +13,50 @@
   }
   body{
     font-family: 'Jost', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
-  h4{
+  h2{
     color: #fff;
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  h3{
+    color: #fff;
+    font-size: 2rem;
+  }
+  figcaption{
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 10px 0 3px;
+  }
+  a:focus{
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  .ms_subtitle{
+    color: #76787d;
+    font-size: 1.3rem;
   }
 /* typography end */
 
-/* header start */
+/* general rules start */
+  .ms_container{
+    height: 100vh;
+    width: 100%;
+  }
+/* general rules end */
+
+/* top bar start */
   .ms_top_bar{
     width: calc(100% - 230px);
     height: 70px;
     background-color: #000;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
     margin-left: 230px;
-    float: right;
+    position: fixed;
     text-align: right;
   }
   .ms_button{
@@ -35,64 +65,202 @@
     background-color: Transparent;
     border: 1px solid #fff;
     border-radius: 25px;
-    margin: 18px 20px 0 0;
+    margin: 20px 20px 0 0;
     font-weight: 500;
     font-family: 'Jost', sans-serif;
+    font-size: 1.2rem;
   }
-/* header end */
+  .ms_button:hover{
+    padding: 8px 32px;
+    margin: 16px 20px 0 0;
+    font-size: 1.4rem;
+    transition: .3s;
+  }
+/* top bar end */
 
 /* main start */
-  .ms_leftside_menu{
-    background-color: #000;
-    height: calc(100vh - 80px);
-    width: 230px;
-    position: fixed;
-    z-index: 1;
-  }
-  .ms_logo{
-    height: 40px;
-    margin: 15px 0 20px 20px;
-  }
-  .ms_menu li {
-    padding: 6px 20px;
-  }
-  .ms_menu li:hover{
-    border-left: 2px solid #adff2f;
-  }
-  .ms_menu li a:hover{
-    color: #fff;
-  }
-  .ms_menu li a{
-   text-decoration: none;
-   color: #6c6c6c;
-  }
-  .ms_icon{
-    height:20px;
-    vertical-align: text-top;
-    color: #d2d2d2;
-  }
-  .ms_leftside_menu h4{
-    padding: 5px 20px;
-    margin-top: 8px;
-  }
-  .ms_playlist_plus{
-    padding: 8px;
-    background-color: #b4b4b4;
-    color: #000;
-    margin-right: 12px;
-  }
-  .ms_main_content{
-    background-color: #141922;
-    height: calc(100vh - 80px);
-    width: calc(100% - 230px);
-    margin-left: 230px;
-    overflow-y: auto;
-  }
+  /* leftside start */
+    .ms_leftside_menu{
+      background-color: #000;
+      height: calc(100vh - 80px);
+      width: 230px;
+      position: fixed;
+      z-index: 1;
+    }
+    .ms_logo{
+      height: 40px;
+      margin: 15px 0 20px 20px;
+    }
+    .ms_menu{
+      height: calc(100% - 300px);
+    }
+    .ms_menu li {
+      padding: 6px 20px;
+    }
+    .ms_menu li:first-child {
+      border-left: 2px solid #adff2f;
+    }
+    .ms_menu li a{
+     color: #6c6c6c;
+    }
+    .ms_menu li a:hover{
+      color: #fff;
+      transition: .3s;
+    }
+    .ms_menu li a:focus{
+      color: #fff;
+      transition: .3s;
+    }
+    .ms_icon{
+      height:20px;
+      vertical-align: text-top;
+      color: #d2d2d2;
+    }
+    .ms_leftside_menu h3{
+      padding: 5px 20px;
+      margin-top: 8px;
+    }
+    .ms_playlist {
+      height: calc(100% - 300px);
+      overflow-y: auto;
+    }
+    .ms_playlist li:first-child {
+      border: none;
+    }
+    .ms_playlist li:hover .ms_playlist_plus{
+      background-color: #fff;
+      transition: .3s;
+    }
+    .ms_playlist_plus{
+      padding: 8px;
+      background-color: #b4b4b4;
+      color: #000;
+      margin-right: 12px;
+    }
+    .ms_bottom_leftside{
+      position:fixed;
+      width:230px;
+      height: 80px;
+      bottom: 80px;
+      background-color: #000;
+    }
+    .ms_download, .ms_user{
+      position: absolute;
+    }
+    .ms_download{
+      bottom: 40px;
+      left: 15px;
+      width: 190px;
+      border-bottom: 1px solid #636363;
+      padding-bottom: 5px;
+      color: #6c6c6c;
+      font-size: 1.3rem;
+    }
+    .ms_download:hover{
+      color: #fff;
+    }
+    .ms_download:focus{
+      color: #fff;
+    }
+    .ms_bottom_leftside i{
+      padding: 0 6px 0 4px;
+      display: inline-block;
+    }
+    .ms_user{
+      bottom: 0;
+      left: 15px;
+      color: #fff;
+      font-weight: 500;
+      font-size: 1.6rem;
+    }
+    .ms_user i{
+      font-size: 1.8rem;
+    }
+  /* leftside end */
+
+  /* main content start */
+    .ms_main_content{
+      background-color: #141922;
+      height: 100%;
+      width: calc(100% - 230px);
+      margin-left: 230px;
+      padding: 15px;
+    }
+
+    /* categories start */
+      .ms_categories{
+        text-align: center;
+        margin: 70px 15px 25px;
+      }
+      .ms_categories li{
+        display: inline;
+        font-size: 1.3rem;
+      }
+      .ms_categories li a{
+        color: #707277;
+        font-weight: 500;
+        margin: 0 10px;
+        width: 5px;
+      }
+      .ms_categories li a:hover{
+        border-bottom: 2px solid #adff2f;
+      }
+    /* categories end */
+
+    /* Recently played start */
+      .ms_album_col figure{
+        text-align: center;
+        width: 100%;
+      }
+      .ms_image a img{
+        width: 100%;
+        height: auto;
+      }
+      .ms_image{
+        position:relative;
+      }
+      .ms_overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: #000;
+      }
+      .ms_image:hover .ms_overlay {
+        opacity: 0.7;
+      }
+      .ms_playicon{
+        color: #fff;
+        font-size: 60px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      .ms_playicon:hover{
+        color:#fff;
+      }
+      .ms_playicon:focus{
+        color:#fff;
+      }
+      .fa-play-circle:hover {
+        color: #fff;
+      }
+    /* Recently played end */
+
+
+  /* main content end */
 /* main end */
 
 /* footer start */
   .ms_player {
-    overflow: hidden;
     background-color: #282828;
     position: fixed;
     bottom: 0;
