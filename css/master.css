@@ -18,8 +18,8 @@
   h2{
     color: #fff;
     font-size: 2.6rem;
-    margin-bottom: 20px;
     font-weight: 500;
+    margin-left: 20px;
   }
   h3{
     color: #fff;
@@ -36,9 +36,16 @@
   a:hover{
     text-decoration: none;
   }
+  .ms_artist{
+    color: #76787d;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
   .ms_subtitle{
     color: #76787d;
     font-size: 1.3rem;
+    margin-bottom: 20px;
+    margin-left: 20px;
   }
 /* typography end */
 
@@ -46,6 +53,9 @@
   .ms_container{
     height: 100vh;
     width: 100%;
+  }
+  .ms_row{
+    margin: 20px 0;
   }
 /* general rules end */
 
@@ -58,6 +68,7 @@
     margin-left: 230px;
     position: fixed;
     text-align: right;
+    z-index: 1;
   }
   .ms_button{
     padding: 6px 30px;
@@ -138,7 +149,7 @@
       margin-right: 12px;
     }
     .ms_bottom_leftside{
-      position:fixed;
+      position: fixed;
       width:230px;
       height: 80px;
       bottom: 80px;
@@ -184,7 +195,7 @@
       height: 100%;
       width: calc(100% - 230px);
       margin-left: 230px;
-      padding: 15px;
+      padding: 15px 0 80px;
     }
 
     /* categories start */
@@ -208,7 +219,7 @@
     /* categories end */
 
     /* Recently played start */
-      .ms_album_col figure{
+      figure{
         text-align: center;
         width: 100%;
       }
@@ -255,7 +266,51 @@
       }
     /* Recently played end */
 
-
+    /* Recently played start */
+      .ms_image_round a img{
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+      }
+      .ms_image_round{
+        position:relative;
+      }
+      .ms_overlay_round {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: #000;
+        border-radius: 50%;
+      }
+      .ms_image_round:hover .ms_overlay_round {
+        opacity: 0.7;
+      }
+      .ms_playicon_round{
+        color: #fff;
+        font-size: 60px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      .ms_playicon:hover{
+        color:#fff;
+      }
+      .ms_playicon:focus{
+        color:#fff;
+      }
+      .fa-play-circle:hover {
+        color: #fff;
+      }
+    /* Recently played end */
   /* main content end */
 /* main end */
 
