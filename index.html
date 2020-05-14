@@ -20,25 +20,26 @@
         <div class="ms_leftside_menu">
           <nav>
             <a href="#">
-              <img class="ms_logo" src="img/logo.svg" alt="Logo Spotify">
+              <img class="ms_logo hidden-xs" src="img/logo.svg" alt="Logo Spotify">
+              <img class="ms_mini_logo hidden-sm hidden-md hidden-lg" src="img/logo-small.svg" alt="Logo Spotify">
             </a>
             <ul class="ms_menu">
               <li>
                 <img class="ms_icon" src="img/home.svg" alt="Icona home">
-                <a href="#">  Home</a>
+                <a class="hidden-xs" href="#">  Home</a>
               </li>
               <li>
                 <img class="ms_icon" src="img/search.svg" alt="Icona cerca">
-                <a href="#">  Cerca</a>
+                <a class="hidden-xs" href="#">  Cerca</a>
               </li>
               <li>
                 <img class="ms_icon" src="img/libreria.svg" alt="Icon libreria">
-                <a href="#">  La tua libreria</a>
+                <a class="hidden-xs" href="#">  La tua libreria</a>
               </li>
             </ul>
           </nav>
-          <h3>PLAYLIST</h3>
-          <ul class="ms_menu ms_playlist">
+          <h3 class="hidden-xs">PLAYLIST</h3>
+          <ul class="ms_menu ms_playlist hidden-xs">
             <li>
               <a href="#">
                 <i class="fas fa-plus ms_playlist_plus"></i>
@@ -70,11 +71,11 @@
           <div class="ms_bottom_leftside">
             <a href="#" class="ms_download">
               <i class="far fa-arrow-alt-circle-down"></i>
-              Installa app
+              <span class="hidden-xs">Installa app</span>
             </a>
             <p class="ms_user">
               <i class="fas fa-user-circle"></i>
-              John Doe
+              <span class="hidden-xs">John Doe</span>
             </p>
           </div>
         </div>
@@ -318,7 +319,50 @@
 
       <!-- footer start -->
       <footer class="ms_player">
+        <div class="container-fluid">
+          <div class="row">
 
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-3">
+              <a href="#"><img class="ms_img_mini" src="img/sinister.jpeg" alt="Sinister cover"></a>
+              <a href="#"><h4 class="ms_song_mini">Sinister</h4></a>
+              <a href="#"><p class="ms_artist">Artista</p></a>
+              <a href="#"><i class="far fa-heart"></i></a>
+              <a href="#"><i class="far fa-folder"></i></a>
+            </div>
+
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-lg-offset-1">
+              <div class="text-center ms_player_functions">
+                <a href="#"><i class="fas fa-random"></i></a>
+                <a href="#"><i class="fas fa-step-backward"></i></a>
+                <a href="#"><i class="far fa-play-circle"></i></a>
+                <a href="#"><i class="fas fa-step-forward"></i></a>
+                <a href="#"><i class="fas fa-redo-alt"></i></a>
+              </div>
+              <div class="ms_time text-left">
+                <p class="ms_left_time">0:25</p>
+              </div>
+              <div class="ms_greybar">
+                <div class="ms_whitebar">
+                </div>
+              </div>
+              <div class="ms_time text-right">
+                <p class="ms_right_time">4:35</p>
+              </div>
+            </div>
+
+            <div class="ms_rightcol text-right col-xs-4 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-2">
+              <a href="#"><i class="fas fa-list"></i></a>
+              <a href="#"><i class="fas fa-tv"></i></a>
+              <a href="#"><i class="fas fa-volume-up"></i></a>
+              <div class="ms_greybar ms_rightside_player">
+                <div class="ms_whitebar">
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
       </footer>
       <!-- footer end -->
     </div>
