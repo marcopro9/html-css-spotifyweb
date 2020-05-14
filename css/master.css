@@ -4,9 +4,6 @@
     margin:0;
     box-sizing: border-box;
   }
-  body, footer{
-     min-width:435px;
-  }
 /* reset end */
 
 /* tipography start */
@@ -27,21 +24,19 @@
     color: #fff;
     font-size: 2rem;
   }
-  figcaption{
+  .ms_album{
     color: #fff;
     font-size: 1.5rem;
     margin: 10px 0 3px;
-  }
-  a:focus{
-    text-decoration: none;
-  }
-  a:hover{
-    text-decoration: none;
   }
   .ms_artist{
     color: #76787d;
     font-size: 1.3rem;
     margin-bottom: 20px;
+    display: block;
+  }
+  .ms_artist:hover, .ms_artist:hover{
+    color: #76787d;
   }
   .ms_subtitle{
     color: #76787d;
@@ -52,12 +47,38 @@
 /* typography end */
 
 /* general rules start */
+  body, footer{
+    min-width:435px;
+  }
+  body{
+    min-height: 350px;
+  }
   .ms_container{
     height: 100vh;
     width: 100%;
   }
   .ms_row{
     margin: 20px 0;
+  }
+  a:focus{
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  .ms_menu li a:hover, .ms_menu li a:focus,
+  .ms_playlist li:hover .ms_playlist_plus,
+  .ms_download:hover, .ms_download:focus,
+  .ms_categories li a:hover,
+  .ms_playicon:hover, .ms_playicon_round:hover,
+  .ms_playicon:focus, .ms_playicon_round:focus {
+    color: #fff;
+    transition: .3s;
+  }
+  .fa-play-circle:hover, .ms_album:hover,
+  .ms_album:focus, .ms_player a i, .ms_player a i:hover,
+  .ms_menu li:first-child a, .ms_categories li:first-child a{
+    color: #fff;
   }
 /* general rules end */
 
@@ -116,14 +137,6 @@
     .ms_menu li a{
      color: #6c6c6c;
     }
-    .ms_menu li a:hover{
-      color: #fff;
-      transition: .3s;
-    }
-    .ms_menu li a:focus{
-      color: #fff;
-      transition: .3s;
-    }
     .ms_icon{
       height:20px;
       vertical-align: text-top;
@@ -139,10 +152,6 @@
     }
     .ms_playlist li:first-child {
       border: none;
-    }
-    .ms_playlist li:hover .ms_playlist_plus{
-      background-color: #fff;
-      transition: .3s;
     }
     .ms_playlist_plus{
       padding: 8px;
@@ -168,12 +177,6 @@
       padding-bottom: 5px;
       color: #6c6c6c;
       font-size: 1.3rem;
-    }
-    .ms_download:hover{
-      color: #fff;
-    }
-    .ms_download:focus{
-      color: #fff;
     }
     .ms_bottom_leftside i{
       padding: 0 6px 0 4px;
@@ -212,12 +215,12 @@
         line-height: 3rem;
       }
       .ms_categories li a span:before{
-        content : "";
+        content: "";
         position: absolute;
-        left    : 23px;
-        bottom  : -5px;
-        height  : 1px;
-        width   : 30%;
+        left: 23px;
+        bottom: -5px;
+        height: 1px;
+        width: 30%;
         border-bottom:3px solid #adff2f;
       }
       .ms_categories li a{
@@ -228,14 +231,10 @@
       .ms_categories li:last-child a{
         margin-right: 0;
       }
-      .ms_categories li a:hover{
-        color: #fff;
-        transition: .3s;
-      }
     /* categories end */
 
     /* Recently played start */
-      figure{
+      .ms_figure{
         text-align: center;
         width: 100%;
       }
@@ -245,6 +244,7 @@
       }
       .ms_image{
         position:relative;
+        margin-bottom: 10px;
       }
       .ms_overlay {
         position: absolute;
@@ -258,38 +258,25 @@
         transition: .3s ease;
         background-color: #000;
       }
-      .ms_image:hover .ms_overlay {
-        opacity: 0.7;
+      .ms_image:hover .ms_overlay, .ms_round:hover .ms_overlay_round {
+        opacity: .7;
       }
-      .ms_playicon{
+      .ms_playicon, .ms_playicon_round{
         color: #fff;
         font-size: 60px;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
         text-align: center;
-      }
-      .ms_playicon:hover{
-        color:#fff;
-      }
-      .ms_playicon:focus{
-        color:#fff;
-      }
-      .fa-play-circle:hover {
-        color: #fff;
       }
     /* Recently played end */
 
     /* Artisti popolari start */
-      .ms_image_round a img{
+      .ms_round a img{
         width: 100%;
         height: auto;
         border-radius: 50%;
-      }
-      .ms_image_round{
-        position:relative;
       }
       .ms_overlay_round {
         position: absolute;
@@ -303,28 +290,6 @@
         transition: .3s ease;
         background-color: #000;
         border-radius: 50%;
-      }
-      .ms_image_round:hover .ms_overlay_round {
-        opacity: 0.7;
-      }
-      .ms_playicon_round{
-        color: #fff;
-        font-size: 60px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        text-align: center;
-      }
-      .ms_playicon:hover{
-        color:#fff;
-      }
-      .ms_playicon:focus{
-        color:#fff;
-      }
-      .fa-play-circle:hover {
-        color: #fff;
       }
     /* artisti popolari end */
   /* main content end */
@@ -363,12 +328,6 @@
     margin-top: -25px;
     color: #6a6a6a;
     font-size: 1.3rem;
-  }
-  .ms_player a i{
-    color: #fff;
-  }
-  .ms_player a i:hover{
-    color: #fff;
   }
   .ms_player .fa-heart{
     margin-left: 90px;
@@ -511,7 +470,6 @@
         margin:2px 0 0 40px;
       }
       .ms_player a .fa-heart, .ms_player a .fa-folder{
-        margin-top: ;
         color: #6a6a6a;
         font-size: 1.3rem;
       }
@@ -544,19 +502,12 @@
         width: 30%;
       }
     /* footer end */
-
   }
 /* media query xs end */
 
-/* mediaquery sm start */
-  @media all and (min-width:768px) and (max-width: 991px) {
-
-  }
-/* media query sm end */
-
 /* mediaquery md start */
   @media all and (min-width:992px) and (max-width: 1199px) {
-    figure{
+    .ms_figure{
       width: 100%;
       height: 300px;
     }
